@@ -1,0 +1,33 @@
+{
+    "version": "0.5.0",
+    "description": "Terminal with command blocks, split panes and a WebAssembly plugin sandbox",
+    "homepage": "https://github.com/LuisPeixoto/TermZip",
+    "license": "MIT",
+    "notes": "TermZip is not signed with a Windows certificate yet, so SmartScreen may warn the first time it is opened.",
+    "url": "https://github.com/LuisPeixoto/TermZip/releases/download/v0.5.0/TermZip_0.5.0_x64-setup.exe",
+    "hash": "b5437aa806e9b46145cb49f13146f3210f11838b5f85b791cc60b98856016c47",
+    "installer": {
+        "file": "TermZip_0.5.0_x64-setup.exe",
+        "args": [
+            "/S",
+            "/D=$dir"
+        ]
+    },
+    "uninstaller": {
+        "file": "uninstall.exe",
+        "args": "/S"
+    },
+    "bin": "termzip.exe",
+    "shortcuts": [
+        [
+            "termzip.exe",
+            "TermZip"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/LuisPeixoto/TermZip"
+    },
+    "autoupdate": {
+        "url": "https://github.com/LuisPeixoto/TermZip/releases/download/v${version}/TermZip_${version}_x64-setup.exe"
+    }
+}
